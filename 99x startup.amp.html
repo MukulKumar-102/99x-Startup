@@ -1,0 +1,489 @@
+<!doctype html>
+<html amp lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.2.js"></script>
+    <title>99x</title>
+    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    <!-- style -->
+
+    <style amp-custom>
+        /* global */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .pink-bg{
+            background-color: #DC1871;
+        }
+
+
+            h1 {
+            font-size: 64px;
+            line-height: 72px;
+            font-weight: 700;
+            }
+            .medium-h1-h2_txt{
+                font-size: 56px;
+                line-height: 64px;
+                font-weight: 400;
+                letter-spacing: 0.28px;
+            }
+
+            h2 {
+            font-size: 52px;
+            margin: 30px 0px;
+            }
+
+            h3 {
+            font-size: 38px;
+            margin: 35px 0px;
+            }
+            .small-txt{
+                font-size: 36px;
+                line-height: 48px;
+                font-weight: 400;
+            }
+
+            h4 {
+            font-size: 16px;
+            margin: 20px 0px;
+            }
+            .center{
+                text-align: center;
+            }
+            .white-text{
+                color: #fff;
+            }
+
+            .flex{
+                display: flex;
+            }
+            .flex-col{
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            .btn_cursor{
+                cursor: pointer;
+            }
+
+
+
+            /* custom */
+
+            /* custom carousel button */
+            .amp-carousel-button-prev,.amp-carousel-button-next {
+                width:60px; 
+                padding:45px;
+                border-radius: 60px;    
+                cursor: pointer;
+                color: black;
+                background-color: #fff;
+                box-shadow: 0px 0px 10px #8080808c;
+                outline: none;
+                border:none;
+                }
+
+            .work-heading{
+                font-size: 48px;
+                line-height: 56px;
+                letter-spacing: 0.28px;
+                font-weight: 400;
+            }
+
+            .work-card-container{
+                display: grid;
+                grid-template-columns: auto auto;
+                /* background-color: #e0d9ff; */
+                margin:2rem 5rem;
+                grid-gap: 1.5rem;
+            }
+            .card{
+                width:544px;
+                border-radius: 8px;
+                background-color: rgb(51, 51, 51);
+                position: relative;
+                background-image: url("Assets/Rectangle\ 285.svg");
+                /* background-color: linear-gradient(#000000 15.63% rgba(0, 0, 0, 0)  100%); */
+            }
+            .card-body{
+                position: absolute;
+                z-index:1;
+                top:0;
+                margin:20px 10px 20px 64px;
+                /* background-color: cornflowerblue; */
+                /* padding:50px 64px; */
+            }
+            .link{
+                border-radius: 16px;
+                text-decoration: none;
+                border: 1px solid #FFFFFF;
+                padding:9px;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+
+            }
+            .card-txt{
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                letter-spacing: 0.28px;
+                margin: 2rem 0rem;
+            }
+            .dnld-btn >button{
+                font-size: 18px;
+                border-radius: 5px;
+                padding: 16px;
+                font-weight: 700;
+                border:none;
+            }
+
+
+
+
+
+    </style>
+
+</head>
+  <body>
+    
+    <section id="worksection">
+
+        <div class="work-container">
+            <h2 class="center work-heading">Some of our latest works!</h2>
+                            
+                <amp-carousel
+                width="400"
+                height="295"
+                layout="responsive"
+                type="slides"
+                controls
+                role="region"
+                aria-label="Basic carousel"
+                >
+               
+                    <div class="work-card-container">
+
+                         <div class="card">
+                            <amp-img
+                            alt="huppe"
+                            src="/Assets/huupe-img.webp"
+
+                            width="50"
+                            height="40"
+                            layout="responsive"
+                            >
+                            </amp-img> 
+                            <div class="card-body  white-text">
+                                <h3 class="small_txt">Huupe</h3>
+                                <div class="card-detail">
+                                    <a href="#" class="link  white-text">UI/UX</a>
+                                    <a href="#" class="link  white-text">Web Development</a>
+                                </div>
+                                <div class="card-text">
+                                    <p class="card-txt">We were assigned to design the website with a more focused approach 
+                                        on the brand and a smooth experience in getting 
+                                        their hands on the smartest hoops.</p>
+                                </div>
+                                <div class="dnld-btn">
+                                    <button class="download btn_cursor pink-bg white-text">Download</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="card">
+                            <amp-img
+                            alt="huppe"
+                            src="/Assets/gotissue.webp"
+
+                            width="50"
+                            height="40"
+                            layout="responsive"
+                            >
+                            </amp-img> 
+                            <div class="card-body white-text">
+                                <h3 class="small_txt">We’ve Got Issues</h3>
+                                <div class="card-detail">
+                                    <a href="#" class="link  white-text">UI/UX</a>
+                                    <a href="#" class="link  white-text">Web Development</a>
+                                </div>
+                                <div class="card-text">
+                                    <p class="card-txt">We collaborated with WGT to enlighten people about issues that matter with intuitive UX, stunning branding, and Web Design.</p>
+                                </div>
+                                <div class="dnld-btn">
+                                    <button class="download btn_cursor pink-bg white-text">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <amp-img
+                            alt="huppe"
+                            src="/Assets/mob.webp"
+
+                            width="50"
+                            height="40"
+                            layout="responsive"
+                            >
+                            </amp-img> 
+                            <div class="card-body white-text">
+                                <h3 class="small_txt">Fuse.io</h3>
+                                <div class="card-detail">
+                                    <a href="#" class="link white-text">UI/UX</a>
+                                    <a href="#" class="link  white-text">Content</a>
+                                    <a href="#" class="link  white-text">App Development</a>
+                                </div>
+                                <div class="card-text">
+                                    <p class="card-txt">We were assigned to bring the idea to life and design a MVP that helps the end-user manage, grow and put their money to work with ease.</p>
+                                </div>
+                                <div class="dnld-btn">
+                                    <button class="download btn_cursor pink-bg white-text">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <amp-img
+                            alt="huppe"
+                            src="/Assets/health.webp"
+
+                            width="50"
+                            height="40"
+                            layout="responsive"
+                            >
+                            </amp-img> 
+                            <div class="card-body white-text">
+                                <h3 class="small_txt">Healthcare</h3>
+                                <div class="card-detail">
+                                    <a href="#" class="link  white-text">UI/UX</a>
+                                    <a href="#" class="link  white-text">Web Development</a>
+                                    <a href="#" class="link  white-text">Content</a>
+                                </div>
+                                <div class="card-text">
+                                    <p class="card-txt">We partnered with a leading Healthcare service provider in india to make surgeries easily accessible to anyone and everyone that needs them. </p>
+                                </div>
+                                <div class="dnld-btn">
+                                    <button class="download btn_cursor pink-bg white-text">Download</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="work-card-container">
+
+                        <div class="card">
+                           <amp-img
+                           alt="huppe"
+                           src="/Assets/kickpick.webp"
+
+                           width="50"
+                           height="40"
+                           layout="responsive"
+                           >
+                           </amp-img> 
+                           <div class="card-body  white-text">
+                               <h3 class="small_txt">Kickpick</h3>
+                               <div class="card-detail">
+                                   <a href="#" class="link  white-text">UI/UX</a>
+                                   <a href="#" class="link  white-text">Content</a>
+                                   <a href="#" class="link  white-text">App Development</a>
+                               </div>
+                               <div class="card-text">
+                                   <p class="card-txt">We partnered with kickpick to create and design an
+                                    MVP of the e-commerce app, that allows users get their hands on all the freshest and latest drops with ease. </p>
+                               </div>
+                               <div class="dnld-btn">
+                                   <button class="download btn_cursor pink-bg white-text">Download</button>
+                               </div>
+                           </div>
+
+                       </div>
+                       <div class="card">
+                           <amp-img
+                           alt="huppe"
+                           src="/Assets/insurence.webp"
+
+                           width="50"
+                           height="40"
+                           layout="responsive"
+                           >
+                           </amp-img> 
+                           <div class="card-body white-text">
+                               <h3 class="small_txt">Insurance</h3>
+                               <div class="card-detail">
+                                   <a href="#" class="link  white-text">UI/UX</a>
+                                   <a href="#" class="link  white-text">Content</a>
+                               </div>
+                               <div class="card-text">
+                                   <p class="card-txt">We collaborated with a leading insurance firm that offers multiple insurance products to streamline, Sales, Finance & Product with intuitve UX/UI.</p>
+                               </div>
+                               <div class="dnld-btn">
+                                   <button class="download btn_cursor pink-bg white-text">Download</button>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="card">
+                           <amp-img
+                           alt="huppe"
+                           src="/Assets/alivio.webp"
+
+                           width="50"
+                           height="40"
+                           layout="responsive"
+                           >
+                           </amp-img> 
+                           <div class="card-body white-text">
+                               <h3 class="small_txt">Alivio</h3>
+                               <div class="card-detail">
+                                   <a href="#" class="link white-text">UI/UX</a>
+                                   <a href="#" class="link  white-text">Web Development</a>
+                                   <a href="#" class="link  white-text">Content</a>
+                               </div>
+                               <div class="card-text">
+                                   <p class="card-txt">Alivio is a fitness and personal care app that offers content on-demand from top-notch fitness instructors, therapists and coaches worldwide.</p>
+                               </div>
+                               <div class="dnld-btn">
+                                   <button class="download btn_cursor pink-bg white-text">Download</button>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="card">
+                           <amp-img
+                           alt="huppe"
+                           src="/Assets/oto capital.webp"
+
+                           width="50"
+                           height="40"
+                           layout="responsive"
+                           >
+                           </amp-img> 
+                           <div class="card-body white-text">
+                               <h3 class="small_txt">OTO Capital</h3>
+                               <div class="card-detail">
+                                   <a href="#" class="link  white-text">UI/UX</a>
+                                   <a href="#" class="link  white-text">Content</a>
+                                   <a href="#" class="link  white-text">Content</a>
+                               </div>
+                               <div class="card-text">
+                                   <p class="card-txt">We partnered with OTO to reimagine buying automobiles. So we made the entire journey socially engaging plus immersive experiences. </p>
+                               </div>
+                               <div class="dnld-btn">
+                                   <button class="download btn_cursor pink-bg white-text">Download</button>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="work-card-container">
+
+                    <div class="card">
+                       <amp-img
+                       alt="huppe"
+                       src="/Assets/new.webp"
+
+                       width="50"
+                       height="40"
+                       layout="responsive"
+                       >
+                       </amp-img> 
+                       <div class="card-body  white-text">
+                           <h3 class="small_txt">Tekorero</h3>
+                           <div class="card-detail">
+                               <a href="#" class="link  white-text">UI/UX</a>
+                               <a href="#" class="link  white-text">Content</a>
+                               <a href="#" class="link  white-text">App Development</a>
+                           </div>
+                           <div class="card-text">
+                               <p class="card-txt">We collaborated to design the website with a more focused approach on kids and learning experiences to get them from just coding to exceptional coders.</p>
+                           </div>
+                           <div class="dnld-btn">
+                               <button class="download btn_cursor pink-bg white-text">Download</button>
+                           </div>
+                       </div>
+
+                   </div>
+                   <div class="card">
+                       <amp-img
+                       alt="huppe"
+                       src="/Assets/gausemann.webp"
+
+                       width="50"
+                       height="40"
+                       layout="responsive"
+                       >
+                       </amp-img> 
+                       <div class="card-body white-text">
+                           <h3 class="small_txt">Gausmann</h3>
+                           <div class="card-detail">
+                               <a href="#" class="link  white-text">UI/UX</a>
+                               <a href="#" class="link  white-text">Web Development</a>
+                           </div>
+                           <div class="card-text">
+                               <p class="card-txt">We helped Gausmann design and build their website and CMS  from scratch, while keeping the aesthetics clean minimal, and user-friendly.</p>
+                           </div>
+                           <div class="dnld-btn">
+                               <button class="download btn_cursor pink-bg white-text">Download</button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <amp-img
+                       alt="huppe"
+                       src="/Assets/intute.webp"
+
+                       width="50"
+                       height="40"
+                       layout="responsive"
+                       >
+                       </amp-img> 
+                       <div class="card-body white-text">
+                           <h3 class="small_txt">Intuit</h3>
+                           <div class="card-detail">
+                               <a href="#" class="link white-text">UI/UX</a>
+                               <a href="#" class="link  white-text">Web Development</a>
+                           </div>
+                           <div class="card-text">
+                               <p class="card-txt">We helped Intuit design and build a brand new website, from scratch with stunning aesthetics, that’s clean and minimal.</p>
+                           </div>
+                           <div class="dnld-btn">
+                               <button class="download btn_cursor pink-bg white-text">Download</button>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="card">
+                       <amp-img
+                       alt="huppe"
+                       src="/Assets/consilium.webp"
+
+                       width="50"
+                       height="40"
+                       layout="responsive"
+                       >
+                       </amp-img> 
+                       <div class="card-body white-text">
+                           <h3 class="small_txt">Concelium</h3>
+                           <div class="card-detail">
+                               <a href="#" class="link  white-text">UI/UX</a>
+                               <a href="#" class="link  white-text">Web Development</a>
+                           </div>
+                           <div class="card-text">
+                               <p class="card-txt">We helped them redesign their website structure and architecture with more emphasis on the brand also keeping it clean, functional, and highly intuitive. </p>
+                           </div>
+                           <div class="dnld-btn">
+                               <button class="download btn_cursor pink-bg white-text">Download</button>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+                </amp-carousel>
+
+        </div>
+
+    </section>
+
+  </body>
+</html>
